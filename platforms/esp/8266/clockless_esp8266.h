@@ -20,6 +20,13 @@ __attribute__ ((always_inline)) inline static uint32_t __clock_cycles() {
   return cyc;
 }
 
+typedef struct {
+    uint32_t c0;
+    uint32_t c1;
+    uint32_t c2;
+} out_4px;
+
+
 #define FASTLED_HAS_CLOCKLESS 1
 
 template <int DATA_PIN, int T1, int T2, int T3, EOrder RGB_ORDER = RGB, int XTRA0 = 0, bool FLIP = false, int WAIT_TIME = 9>
